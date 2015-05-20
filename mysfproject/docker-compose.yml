@@ -1,0 +1,13 @@
+web:
+  build: .
+  links:
+   - db
+  ports:
+   - "8000:80"
+  volumes:
+   - /Users/fabriceb/dev/symfony2docker/mysfproject/src/:/var/www/html
+
+db:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: password
